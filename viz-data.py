@@ -144,7 +144,7 @@ def create_interactive_chart_kuliah(df_kuliah):
 
     return fig_kuliah
 
-def create_interactive_chart_kuliah(df_elektabilitas):
+def create_interactive_chart_elektabilitas(df_elektabilitas):
     fig_elektabilitas = go.Figure()
 
     for candidate in df_elektabilitas.columns[1:]:
@@ -184,7 +184,7 @@ fig_sd = create_interactive_chart_sd(df_sd)
 fig_smp = create_interactive_chart_smp(df_smp)
 fig_sma = create_interactive_chart_sma(df_sma)
 fig_kuliah = create_interactive_chart_kuliah(df_kuliah)
-fig_elektabilitas = create_interactive_chart_kuliah(df_elektabilitas)
+fig_elektabilitas = create_interactive_chart_elektabilitas(df_elektabilitas)
 fig = create_smooth_line_chart(df_tren_elektabilitas)
 
 st.plotly_chart(fig_sd)
